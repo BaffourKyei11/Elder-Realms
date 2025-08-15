@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elder Realms AI</title>
+  <meta name="description" content="Elder Realms AI — Smarter, kinder, data-driven care for every resident." />
+  <link rel="icon" href="data:," />
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta property="og:title" content="Elder Realms AI" />
+  <meta property="og:description" content="Reimagining elder care with AI, comfort analytics, and compassionate design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1583349681952-868a0b2b62a5?q=80&w=1200&auto=format&fit=crop" />
+  
+ </head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="sticky top-0 left-0 w-full z-20 header-solid">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <div class="nav-glass flex items-center justify-between">
+        <h1 class="text-xl font-bold tracking-tight">Elder Realms</h1>
+        <nav id="desktopNav" class="flex items-center gap-1 text-sm overflow-x-auto whitespace-nowrap">
+          <button class="btn-touch tab-btn px-3 py-1 rounded tab-btn-active" data-tab="home" aria-label="View Home tab" aria-current="page">Home</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="residents" aria-label="View Residents tab">Residents</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="assistant" aria-label="View Assistant tab">Assistant</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="repositioning" aria-label="View Repositioning tab">Repositioning</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="meals" aria-label="View Meals tab">Meals</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="tasks" aria-label="View Tasks tab">Tasks</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="careplans" aria-label="View Care Plans tab">Care Plans</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="ergonomics" aria-label="View Ergonomics tab">Ergonomics</button>
+          <button class="btn-touch tab-btn px-3 py-1 rounded" data-tab="analytics" aria-label="View Analytics tab">Analytics</button>
+          
+          <span class="mx-2 w-px h-5 bg-slate-300/50 hidden sm:inline-block"></span>
+          <div class="hidden sm:flex items-center gap-3 home-anchor-nav">
+            <a href="#home-overview" class="px-2 py-1 rounded hover:underline">Overview</a>
+            <a href="#home-features" class="px-2 py-1 rounded hover:underline">Features</a>
+            <a href="#home-pricing" class="px-2 py-1 rounded hover:underline">Pricing</a>
+            <a href="#home-contact" class="px-2 py-1 rounded hover:underline">Contact</a>
+          </div>
+          <!-- User menu with Settings (gated) -->
+          <details class="relative ml-2" data-user-menu>
+            <summary class="list-none cursor-pointer rounded p-1 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-300 flex items-center gap-2" aria-label="User menu" aria-haspopup="menu" aria-expanded="false">
+              <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-teal-600 text-white text-[10px] font-semibold" data-user-avatar aria-hidden="true">UR</span>
+              <span class="sr-only" data-user-name>Unsigned</span>
+            </summary>
+            <div class="absolute right-0 mt-2 w-44 rounded-md border bg-white shadow-lg py-1 z-30" role="menu" aria-label="User menu">
+              <a href="?tab=settings" class="block px-3 py-2 text-sm hover:bg-slate-50 hidden" role="menuitem" data-menu-settings>Settings</a>
+              <button class="w-full text-left block px-3 py-2 text-sm hover:bg-slate-50" role="menuitem" data-menu-signin>Sign in</button>
+              <button class="w-full text-left block px-3 py-2 text-sm hover:bg-slate-50 hidden" role="menuitem" data-menu-signout>Sign out</button>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-6">
+    <!-- Home (Reimagined Landing) -->
+    <section id="tab-home" class="tab">
+      <!-- Hero with image + gradient overlay in brand palette (teal/amber) -->
+      <section aria-labelledby="hero-title" class="hero relative overflow-hidden rounded-2xl border text-white text-center">
+        <div class="absolute inset-0 -z-10">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop" alt="Elderly care with compassion" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-br from-teal-800/85 via-teal-700/70 to-amber-500/50"></div>
+        </div>
+        <div class="px-6 md:px-12 py-16 md:py-24">
+          <h2 id="hero-title" class="text-h1-fluid font-extrabold leading-tight hero-fade-down">Reimagining Elder Care with AI</h2>
+          <p class="mt-4 text-base opacity-95 hero-fade">Smarter, kinder, data-driven care for every resident.</p>
+          <div class="hero-ctas mt-6 flex flex-wrap items-center justify-center gap-sm hero-fade">
+            <a href="#home-contact" role="button" aria-label="Request a demo" class="btn-touch inline-flex items-center justify-center rounded-md bg-teal-500 text-white font-semibold px-4 py-2 shadow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-300 btn-raise">Request a Demo</a>
+            <a href="#home-overview" role="button" aria-label="Watch overview" class="btn-touch inline-flex items-center justify-center rounded-md border border-white/70 text-white px-4 py-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40 btn-raise">Watch Overview</a>
+          </div>
+        </div>
+      </section>
+    
+    
+      
+
+      <!-- Problem Statement -->
+      <section aria-labelledby="problems-title" class="mt-8">
+        <h3 id="problems-title" class="sr-only">Key pain points in elder care</h3>
+        <div class="grid-3 mt-4">
+          <!-- Card 1 -->
+          <article class="p-5 rounded-xl border bg-slate-50 flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-700 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75l8.954-8.955a1.5 1.5 0 012.122 0l8.454 8.455M4.5 10.5v9.75A1.5 1.5 0 006 21.75h3.75V15a1.5 1.5 0 011.5-1.5h1.5A1.5 1.5 0 0114.25 15v6.75H18A1.5 1.5 0 0019.5 20.25V10.5"/></svg>
+            <div>
+              <div class="text-sm font-semibold">Repositioning discomfort</div>
+              <p class="text-xs text-slate-600 mt-1">Missed intervals and poor timing cause pressure risks and disrupted rest.</p>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article class="p-5 rounded-xl border bg-slate-50 flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25h18M4.5 19.5h15a1.5 1.5 0 001.5-1.5V8.25M4.5 19.5A1.5 1.5 0 013 18V8.25"/></svg>
+            <div>
+              <div class="text-sm font-semibold">Meal suitability issues</div>
+              <p class="text-xs text-slate-600 mt-1">Allergies and preferences get lost—leading to wasted meals and frustration.</p>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article class="p-5 rounded-xl border bg-slate-50 flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-700 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 8.25h12M6 12h12M6 15.75h12"/></svg>
+            <div>
+              <div class="text-sm font-semibold">Chronic back pain among staff</div>
+              <p class="text-xs text-slate-600 mt-1">Manual workflows increase physical strain and burnout for caregivers.</p>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article class="p-5 rounded-xl border bg-slate-50 flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.25h18M6 9.75h12M9 14.25h6M12 18.75h0"/></svg>
+            <div>
+              <div class="text-sm font-semibold">Communication barriers</div>
+              <p class="text-xs text-slate-600 mt-1">Requests get missed; residents feel unheard and anxious.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Solution -->
+      <section id="home-solution" class="mt-10 rounded-2xl border bg-white" aria-labelledby="solution-title">
+        <div class="px-6 md:px-10 py-10 grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 id="solution-title" class="text-xl md:text-2xl font-bold">A kinder system powered by AI + biomedical insights</h3>
+            <p class="mt-3 text-slate-700">We fuse lightweight sensors, on-device AI, and a cloud dashboard to personalize comfort, nutrition, and communication—while reducing staff strain.</p>
+          </div>
+          <div class="flex items-center justify-center">
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_u4yrau.json" background="transparent" speed="1" style="width: 320px; height: 320px;" loop autoplay aria-label="AI workflow animation"></lottie-player>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="home-features" class="mt-10 rounded-2xl border bg-white" aria-labelledby="features-title">
+        <div class="px-6 md:px-10 py-10">
+          <h3 id="features-title" class="text-xl md:text-2xl font-bold">What you can do with Elder Realms AI</h3>
+          <div class="grid-3 mt-6">
+            <!-- Feature 1 -->
+            <article class="group p-5 rounded-xl border bg-white hover:shadow-soft transition">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg>
+                <h4 class="text-sm font-semibold">AI Comfort Monitoring</h4>
+              </div>
+              <p class="text-xs text-slate-600 mt-2">Predictive insights reduce pressure risks and improve sleep quality.</p>
+              <a href="?tab=repositioning" class="mt-3 inline-block text-teal-700 text-xs font-semibold group-hover:underline">Learn More →</a>
+            </article>
+            <!-- Feature 2 -->
+            <article class="group p-5 rounded-xl border bg-white hover:shadow-soft transition">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75h15m-12 6h9m-9-12h9"/></svg>
+                <h4 class="text-sm font-semibold">Meal Preference Tracking</h4>
+              </div>
+              <p class="text-xs text-slate-600 mt-2">Allergy-aware menus tailored to each resident’s likes and needs.</p>
+              <a href="?tab=meals" class="mt-3 inline-block text-teal-700 text-xs font-semibold group-hover:underline">Learn More →</a>
+            </article>
+            <!-- Feature 3 -->
+            <article class="group p-5 rounded-xl border bg-white hover:shadow-soft transition">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5h7.5M3 9.75h18M6 15.75h12M9 20.25h6"/></svg>
+                <h4 class="text-sm font-semibold">Real-Time Communication Aid</h4>
+              </div>
+              <p class="text-xs text-slate-600 mt-2">Requests are captured and routed instantly—no more missed needs.</p>
+              <a href="?tab=assistant" class="mt-3 inline-block text-teal-700 text-xs font-semibold group-hover:underline">Learn More →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem / Overview -->
+      <section id="home-overview" class="mt-10 rounded-2xl border bg-white" aria-labelledby="overview-title">
+        <div class="px-6 md:px-10 py-10">
+          <h3 id="overview-title" class="text-xl md:text-2xl font-bold">Why elder care needs a rethink</h3>
+          <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Repositioning discomfort</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Meal suitability issues</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Chronic back pain among staff</li>
+            <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-teal-500"></span> Communication barriers</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="home-how" class="mt-10 rounded-2xl border bg-white" aria-labelledby="how-title">
+        <div class="px-6 md:px-10 py-10">
+          <h3 id="how-title" class="text-xl md:text-2xl font-bold">How it works</h3>
+          <ol class="mt-4 list-decimal list-inside space-y-2 text-slate-700">
+            <li>Install lightweight sensors & app</li>
+            <li>AI processes comfort, nutrition, and requests</li>
+            <li>Care team receives insights instantly</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Testimonials / Trusted -->
+      <section id="home-trusted" class="mt-10 rounded-2xl border bg-white" aria-labelledby="trusted-title" x-data="{i:0, items:[
+        {q:'Elder Realms AI helped our staff reduce avoidable incidents by 30% in two months.', a:'— Care Home Manager, CA'},
+        {q:'The adherence insights made training new staff so much easier.', a:'— Director of Nursing, TX'},
+        {q:'Families noticed the difference within weeks. We did too.', a:'— Administrator, WA'}]}" x-init="setInterval(()=>i=(i+1)%items.length, 5000)">
+        <h3 id="testimonials-title" class="text-lg font-bold">What Managers Say</h3>
+        <div class="mt-4 rounded-xl border bg-white p-5">
+          <blockquote class="text-slate-800 text-sm" x-text="'“'+items[i].q+'”'"></blockquote>
+          <div class="text-xs text-slate-600 mt-2" x-text="items[i].a"></div>
+          <div class="mt-4 flex items-center gap-2">
+            <button class="btn-touch px-3 py-1 rounded border hover:bg-slate-50" @click="i=(i-1+items.length)%items.length" aria-label="Previous testimonial">◀</button>
+            <button class="btn-touch px-3 py-1 rounded border hover:bg-slate-50" @click="i=(i+1)%items.length" aria-label="Next testimonial">▶</button>
+            <div class="ml-auto flex gap-1">
+              <template x-for="(it,idx) in items" :key="idx">
+                <span class="h-2 w-2 rounded-full" :class="idx===i ? 'bg-teal-600' : 'bg-slate-300'"></span>
+              </template>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="home-pricing" class="mt-10 rounded-2xl border bg-white" aria-labelledby="pricing-title">
+        <div class="px-6 md:px-10 py-10">
+          <h3 id="pricing-title" class="text-xl md:text-2xl font-bold">Flexible pricing for every facility</h3>
+          <table class="pricing-table mt-4" role="table" aria-label="Pricing comparison">
+            <thead>
+              <tr>
+                <th scope="col">Plan</th>
+                <th scope="col">Features</th>
+                <th scope="col">Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row">
+                <td role="cell" data-label="Plan">Starter</td>
+                <td role="cell" data-label="Features">AI comfort basics; Meal tracking; Email support</td>
+                <td role="cell" data-label="Contact"><a href="mailto:hello@elderrealms.ai" class="btn-touch btn-primary">Contact Us</a></td>
+              </tr>
+              <tr role="row">
+                <td role="cell" data-label="Plan">Pro</td>
+                <td role="cell" data-label="Features">Advanced comfort analytics; Allergy-aware menus; Priority support</td>
+                <td role="cell" data-label="Contact"><a href="mailto:hello@elderrealms.ai" class="btn-touch btn-primary">Contact Us</a></td>
+              </tr>
+              <tr role="row">
+                <td role="cell" data-label="Plan">Enterprise</td>
+                <td role="cell" data-label="Features">Custom AI workflows; SSO and audit logs; Dedicated success manager</td>
+                <td role="cell" data-label="Contact"><a href="mailto:hello@elderrealms.ai" class="btn-touch btn-primary">Contact Us</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CTA Footer -->
+      <section id="home-cta" class="mt-10 rounded-2xl border bg-amber-100 text-center" aria-labelledby="cta-title">
+        <div class="px-6 md:px-10 py-12 space-y-6">
+          <h3 id="cta-title" class="text-xl md:text-2xl font-bold">Bring the Future of Care to Your Residents</h3>
+          <div>
+            <a href="#home-contact" class="btn-touch inline-flex items-center justify-center rounded-md bg-teal-600 text-white font-semibold px-4 py-2 shadow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-teal-300">Get Started Today</a>
+          </div>
+          <div class="flex items-center justify-center gap-3 text-slate-700">
+            <a href="mailto:hello@elderrealms.ai" aria-label="Email" class="btn-touch hover:text-teal-700" title="Email us">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 13.065L0 6V4l12 7 12-7v2z"/><path d="M0 6v14h24V6l-12 7L0 6z"/></svg>
+            </a>
+            <span aria-hidden="true">·</span>
+            <span>Contact: <a href="mailto:hello@elderrealms.ai" class="underline hover:text-teal-700">hello@elderrealms.ai</a></span>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Residents -->
+    <section id="tab-residents" class="tab hidden">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold">Residents</h2>
+        <button id="addResidentBtn" class="btn-touch btn-primary">Add Resident</button>
+      </div>
+      <div class="bg-white border rounded p-3 shadow-soft mb-3 grid grid-cols-1 md:grid-cols-6 gap-2 items-end">
+        <label class="block md:col-span-2">
+          <span class="text-sm">Search</span>
+          <input id="residentSearch" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="Search by name" />
+        </label>
+        <label class="block md:col-span-2">
+          <span class="text-sm">Mobility</span>
+          <select id="residentMobilityFilter" multiple class="w-full border rounded p-2 h-[42px] focus:outline-none focus:ring-2 focus:ring-teal-300">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label class="block md:col-span-1">
+          <span class="text-sm">Diet</span>
+          <input id="residentDietFilter" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="e.g., diabetic" />
+        </label>
+        <label class="block md:col-span-1">
+          <span class="text-sm">Sort</span>
+          <select id="residentSort" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300">
+            <option value="name_asc">Name A–Z</option>
+            <option value="name_desc">Name Z–A</option>
+          </select>
+        </label>
+        <div class="md:col-span-6 flex flex-wrap gap-2">
+          <button id="residentImportBtn" class="btn-touch px-3 py-1 rounded border">Import</button>
+          <button id="residentExportJsonBtn" class="btn-touch px-3 py-1 rounded border">Export JSON</button>
+          <button id="residentExportCsvBtn" class="btn-touch px-3 py-1 rounded border">Export CSV</button>
+        </div>
+      </div>
+      <div id="residentList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" aria-live="polite"></div>
+      <div id="residentPagination" class="mt-4 flex items-center justify-center gap-3">
+        <button id="residentPrevPage" class="btn-touch px-3 py-1 rounded border">Prev</button>
+        <span id="residentPageInfo" class="text-sm text-slate-600">Page 1 of 1</span>
+        <button id="residentNextPage" class="btn-touch px-3 py-1 rounded border">Next</button>
+      </div>
+    </section>
+
+    <!-- Resident Edit Modal -->
+    <div id="residentEditModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+      <div class="bg-white rounded shadow-soft w-full max-w-md p-4" role="dialog" aria-modal="true" aria-labelledby="residentModalTitle">
+        <div class="flex items-center justify-between mb-2">
+          <h3 id="residentModalTitle" class="text-lg font-semibold">Resident</h3>
+          <button id="rClose" class="btn-touch text-gray-500 hover:text-gray-700" aria-label="Close">✕</button>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label class="text-sm block mb-1" for="rName">Name</label>
+            <input id="rName" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="Full name" aria-required="true" />
+            <p id="rNameError" class="mt-1 text-sm text-red-600 hidden">Name is required.</p>
+          </div>
+          <div>
+            <label class="text-sm block mb-1" for="rMobility">Mobility</label>
+            <select id="rMobility" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm block mb-1" for="rDiet">Diet</label>
+            <input id="rDiet" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="e.g., diabetic, low-sodium" />
+          </div>
+          <div>
+            <label class="text-sm block mb-1" for="rAllergies">Allergies (comma-separated)</label>
+            <input id="rAllergies" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="e.g., fish, shellfish" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center gap-2 mt-4">
+          <button id="rDelete" class="btn-touch px-3 py-1 rounded border border-red-300 text-red-700 hover:bg-red-50">Delete</button>
+          <div class="flex gap-2">
+            <button id="rCancel" class="btn-touch btn-secondary text-sm">Cancel</button>
+            <button id="rSave" class="btn-touch btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Care Plans -->
+    <section id="tab-careplans" class="tab hidden">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold">Care Plans</h2>
+        <button id="addCarePlanBtn" class="btn-touch btn-primary">Add Care Plan Item</button>
+      </div>
+      <div class="bg-white border rounded p-3 shadow-soft mb-3 flex flex-col md:flex-row gap-2 md:items-center">
+        <div class="flex items-center gap-2">
+          <label class="text-sm">Resident:</label>
+          <select id="cpResidentSelect" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60">
+            <option value="">-- Select resident --</option>
+          </select>
+        </div>
+        <div id="cpSummary" class="text-sm text-slate-700 md:ml-auto"></div>
+      </div>
+      <div id="carePlanList" class="space-y-3"></div>
+    </section>
+
+    <!-- Ergonomics -->
+    <section id="tab-ergonomics" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">Caregiver Ergonomic Tips</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white border rounded p-4 shadow-soft">
+          <h3 class="font-medium">Neutral Spine Checklist</h3>
+          <ul class="list-disc ml-5 text-sm mt-2 text-slate-700">
+            <li>Adjust bed height to hip level</li>
+            <li>Keep load close to body</li>
+            <li>Bend at knees, not at waist</li>
+            <li>Avoid twisting — pivot feet</li>
+            <li>Use slide sheets or mechanical lifts for low-mobility/high-weight</li>
+          </ul>
+        </div>
+        <div class="bg-white border rounded p-4 shadow-soft">
+          <h3 class="font-medium">Micro Stretches (1–2 mins)</h3>
+          <ul class="list-disc ml-5 text-sm mt-2 text-slate-700">
+            <li>Neck: gentle side stretches (10s each)</li>
+            <li>Shoulders: roll forward/back (10 reps)</li>
+            <li>Back: cat-cow standing (10 reps)</li>
+            <li>Hips: quad & hamstring stretch (20s each)</li>
+          </ul>
+        </div>
+        <div class="bg-white border rounded p-4 shadow-soft md:col-span-2">
+          <h3 class="font-medium">Assistive Equipment Guidance</h3>
+          <p class="text-sm text-slate-700 mt-2">Use a mechanical lift when resident mobility is low or weight is high. Always work in pairs for repositioning if unsure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assistant -->
+    <section id="tab-assistant" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">AI Communication Assistant</h2>
+      <div class="space-y-3">
+        <div id="assistantQuick" class="flex flex-wrap gap-2">
+          <button class="btn-touch px-3 py-1 rounded border" data-intent="pain">I feel pain</button>
+          <button class="btn-touch px-3 py-1 rounded border" data-intent="cold">I am cold</button>
+          <button class="btn-touch px-3 py-1 rounded border" data-intent="water">I need water</button>
+          <button class="btn-touch px-3 py-1 rounded border" data-intent="dizzy">I feel dizzy</button>
+        </div>
+        <textarea id="assistantInput" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" rows="3" placeholder="Type a message as resident or caregiver..."></textarea>
+        <div class="flex items-center gap-2">
+          <select id="assistantRole" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" aria-label="Message role">
+            <option value="resident">Resident</option>
+            <option value="caregiver">Caregiver</option>
+          </select>
+          <button id="assistantSend" class="btn-touch btn-primary">Send</button>
+          <button id="assistantClear" class="btn-touch px-3 py-1 rounded border">Clear transcript</button>
+        </div>
+        <div id="assistantTranscript" class="border bg-white rounded p-3 h-64 overflow-auto shadow-soft" role="log" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Repositioning -->
+    <section id="tab-repositioning" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">Repositioning Guidance & Schedule</h2>
+      <div class="bg-white p-4 border rounded shadow-soft mb-4 grid grid-cols-1 md:grid-cols-4 gap-3">
+        <select id="rpResidentSelect" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60 md:col-span-2">
+          <option value="">-- Select resident --</option>
+        </select>
+        <input type="number" id="rpInterval" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Interval (mins)" />
+        <button id="rpSaveInterval" class="btn-primary">Save Interval</button>
+        <div id="rpStatus" class="md:col-span-4 text-sm text-slate-700"></div>
+        <div class="md:col-span-4 flex gap-2">
+          <button id="rpCompleteNow" class="btn-primary">Mark Reposition Completed Now</button>
+        </div>
+      </div>
+
+      <h3 class="font-semibold mb-2">On-demand Guidance</h3>
+      <form id="repositioningForm" class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-white p-4 border rounded shadow-soft">
+        <input type="text" id="rpResident" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Resident ID" />
+        <input type="number" id="rpWeight" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Weight (kg)" />
+        <select id="rpMobility" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60">
+          <option value="low">Mobility: Low</option>
+          <option value="medium">Mobility: Medium</option>
+          <option value="high">Mobility: High</option>
+        </select>
+        <input type="text" id="rpPain" class="border rounded p-2 md:col-span-3 focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Pain points (comma separated)" />
+        <button class="btn-primary md:col-span-3" type="submit">Get Guidance</button>
+      </form>
+      <div id="rpOutput" class="mt-4"></div>
+    </section>
+
+    <!-- Meals -->
+    <section id="tab-meals" class="tab hidden">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold">Meals & Feedback</h2>
+        <button id="addMealBtn" class="btn-primary">Add Meal</button>
+      </div>
+      <div class="mb-3 flex items-center gap-2">
+        <label class="text-sm">For Resident:</label>
+        <select id="mealResidentSelect" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60">
+          <option value="">-- Select resident --</option>
+        </select>
+        <span class="text-xs text-slate-500">Ratings are saved per resident</span>
+      </div>
+      <div id="mealAlerts" class="mb-3 text-sm"></div>
+      <div id="mealList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </section>
+
+    <!-- Tasks -->
+    <section id="tab-tasks" class="tab hidden">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold">Tasks</h2>
+        <button id="addTaskBtn" class="btn-primary">Add Task</button>
+      </div>
+      <div class="bg-white border rounded p-3 shadow-soft mb-3 grid grid-cols-1 md:grid-cols-4 gap-2">
+        <input id="taskAssigneeFilter" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Filter by assignee" />
+        <select id="taskShiftFilter" class="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-royalBlue/60">
+          <option value="">All shifts</option>
+          <option value="day">Day</option>
+          <option value="evening">Evening</option>
+          <option value="night">Night</option>
+        </select>
+        <button id="taskClearFilters" class="btn-primary">Clear Filters</button>
+      </div>
+      <div id="taskList" class="space-y-3"></div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="tab-analytics" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">Analytics (demo)</h2>
+      <div id="analyticsControls" class="bg-white border rounded p-3 shadow-soft mb-3 grid grid-cols-1 md:grid-cols-4 gap-2 items-end">
+        <label class="block md:col-span-2">
+          <span class="text-sm">Resident</span>
+          <select id="analyticsResidentFilter" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300">
+            <option value="">All residents</option>
+          </select>
+        </label>
+        <div class="flex items-center gap-2">
+          <button id="analyticsToggleFull" class="btn-touch px-3 py-1 rounded border" aria-pressed="false" aria-controls="analyticsCards">View full table</button>
+          <button id="analyticsReset" class="btn-touch px-3 py-1 rounded border" aria-label="Reset Analytics filters and view">Reset</button>
+          <button id="analyticsExportCsv" class="btn-touch px-3 py-1 rounded border" aria-label="Export adherence table to CSV">Export CSV</button>
+        </div>
+        <div class="text-xs text-slate-600 md:col-span-1" id="analyticsLive" aria-live="polite"></div>
+      </div>
+      <div id="analyticsCards" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- Diagrams -->
+    <section id="tab-diagrams" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">System Diagrams</h2>
+      <p class="text-sm text-slate-600 mb-2">Mermaid renders the architecture, data model, and AI flow.</p>
+      <div class="space-y-6">
+        <article>
+          <h3 class="font-semibold mb-2">SaaS Architecture</h3>
+          <pre class="mermaid" id="diagram-arch"></pre>
+        </article>
+        <article>
+          <h3 class="font-semibold mb-2">Multi-tenant DB Model</h3>
+          <pre class="mermaid" id="diagram-erd"></pre>
+        </article>
+        <article>
+          <h3 class="font-semibold mb-2">AI Communication Flow</h3>
+          <pre class="mermaid" id="diagram-ai"></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="tab-settings" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">Settings (demo)</h2>
+      <div class="space-y-3">
+        <label class="block">
+          <span class="text-sm">Tenant ID</span>
+          <input id="tenantId" class="border rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="tenant-xyz" />
+        </label>
+        <label class="block">
+          <span class="text-sm">Facility</span>
+          <input id="facilityName" class="border rounded p-2 w-full focus:outline-none focus:ring-2 focus:ring-royalBlue/60" placeholder="Main Facility" />
+        </label>
+        <button id="saveSettings" class="btn-touch btn-primary">Save</button>
+      </div>
+    </section>
+
+    <!-- PRD -->
+    <section id="tab-prd" class="tab hidden">
+      <h2 class="text-lg font-semibold mb-3">Product Requirements (excerpt)</h2>
+      <div id="prdContent" class="prose max-w-none bg-white p-4 border rounded whitespace-pre-wrap text-sm"></div>
+    </section>
+  </main>
+
+  <!-- Mobile Caregiver Shell (hidden by default; shown when ?m=1 or persisted) -->
+  <div id="mobileShell" class="fixed inset-0 flex flex-col bg-slate-50 hidden" aria-hidden="true">
+    <!-- Views container -->
+    <div id="mobileViews" class="flex-1 overflow-auto p-4">
+      <!-- Rounds -->
+      <section id="mview-rounds" class="hidden" aria-labelledby="mRoundsTitle">
+        <h2 id="mRoundsTitle" class="text-lg font-semibold mb-3">Reposition Rounds</h2>
+        <div class="mb-3">
+          <label class="block text-sm mb-1" for="mRoundsResidentFilter">Resident</label>
+          <select id="mRoundsResidentFilter" class="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300">
+            <option value="">All residents</option>
+          </select>
+        </div>
+        <div id="mRoundsList" class="space-y-2" aria-live="polite"></div>
+      </section>
+
+      <!-- Scan/Select -->
+      <section id="mview-scan" class="hidden" aria-labelledby="mScanTitle">
+        <h2 id="mScanTitle" class="text-lg font-semibold mb-3">Select Resident</h2>
+        <div class="flex items-center gap-2 mb-3">
+          <input id="mScanSearch" class="flex-1 border rounded p-2 focus:outline-none focus:ring-2 focus:ring-teal-300" placeholder="Search by name" />
+          <button id="mScanQr" class="btn-touch px-3 py-1 rounded border">QR (stub)</button>
+        </div>
+        <div id="mScanList" class="space-y-2" aria-live="polite"></div>
+      </section>
+
+      <!-- Guidance -->
+      <section id="mview-guidance" class="hidden" aria-labelledby="mGuideTitle">
+        <h2 id="mGuideTitle" class="text-lg font-semibold mb-3">Guided Reposition</h2>
+        <div id="mGuideResidentSummary" class="text-sm text-slate-700 mb-3"></div>
+        <ol id="mGuideSteps" class="list-decimal list-inside space-y-2 text-sm"></ol>
+        <div class="mt-3 flex items-center gap-2">
+          <button id="mGuidePrev" class="btn-touch px-3 py-1 rounded border">Prev</button>
+          <button id="mGuideNext" class="btn-touch px-3 py-1 rounded border">Next</button>
+          <button id="mGuideComplete" class="btn-touch btn-primary ml-auto">Complete</button>
+        </div>
+      </section>
+
+      <!-- Settings -->
+      <section id="mview-settings" class="hidden" aria-labelledby="mSettingsTitle">
+        <h2 id="mSettingsTitle" class="text-lg font-semibold mb-3">Mobile Settings</h2>
+        <div class="space-y-3">
+          <button id="mNotifEnable" class="btn-touch btn-primary">Enable Notifications</button>
+          <p class="text-xs text-slate-600">Mobile mode URL param: <code>?m=1</code>. Persisted in localStorage.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bottom Nav -->
+    <nav id="mobileNav" class="border-t bg-white px-2 py-2 grid grid-cols-4 gap-2">
+      <button class="mobile-tab-btn px-2 py-2 rounded text-sm" data-mtab="rounds" aria-label="Rounds">Rounds</button>
+      <button class="mobile-tab-btn px-2 py-2 rounded text-sm" data-mtab="scan" aria-label="Scan or Select">Scan</button>
+      <button class="mobile-tab-btn px-2 py-2 rounded text-sm" data-mtab="guidance" aria-label="Guidance">Guide</button>
+      <button class="mobile-tab-btn px-2 py-2 rounded text-sm" data-mtab="settings" aria-label="Settings">Settings</button>
+    </nav>
+  </div>
+
+  <footer class="border-t">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-[10px] text-slate-400">
+      &copy; <span id="year"></span> Elder Realms AI 
+      <span class="mx-2">|</span>
+      <span class="text-slate-400">Resources:</span>
+      <a href="?tab=diagrams" class="ml-1 text-slate-500 hover:text-teal-700 hover:underline">Architecture Diagrams</a>
+      <span class="text-slate-300">•</span>
+      <a href="?tab=prd" class="text-slate-500 hover:text-teal-700 hover:underline">PRD</a>
+    </div>
+  </footer>
+  <!-- Minimal non-JS fallback for core message/CTA -->
+  <noscript>
+    <div class="max-w-3xl mx-auto my-6 p-4 rounded border bg-amber-50 text-slate-800">
+      <h2 class="text-lg font-bold">Elder Realms AI</h2>
+      <p class="text-sm mt-1">Smarter, kinder, data-driven care for every resident.</p>
+      <p class="text-xs mt-2">For the full interactive experience (tabs, animations), please enable JavaScript. You can still contact us at
+        <a href="mailto:hello@elderrealms.ai" class="underline">hello@elderrealms.ai</a>.
+      </p>
+    </div>
+  </noscript>
+  <!-- Toast live region -->
+  <div id="toastRegion" class="fixed bottom-4 right-4 space-y-2 z-50" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
